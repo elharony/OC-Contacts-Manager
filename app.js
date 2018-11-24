@@ -24,7 +24,7 @@ function welcomeMessage() {
 
 function showAll(contacts) {
     for(let i = 0; i < contacts.length; i++) {
-        console.log(`Last name: ${contacts[i].lastName}, first name: ${contacts[i].firstName}`)
+        console.log(`First name: ${contacts[i].firstName}, Last name: ${contacts[i].lastName}`)
     }
 }
 
@@ -69,6 +69,11 @@ function userOptions() {
         break;
         case '2':
             addContact()
+            this.userOptions()
+        break;
+        default:
+            // The user wrote an unexpected value
+            console.log("Sorry. I didn't recognize your choice!\nTry again!")
             this.userOptions()
         break;
     }
