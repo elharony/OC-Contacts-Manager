@@ -38,6 +38,8 @@ function addContact() {
         lastName: lastName
     }
     contacts.push(newContact)
+    // Give feedback to the user
+    console.log("Contact added!")
 }
 
 function quit() {
@@ -49,11 +51,11 @@ function quit() {
 }
 
 function userOptions() {
-    console.log('1: List All Contacts \n2: Add Contact\n0: Quit')
+    console.log('Select an option:\n1: List All Contacts \n2: Add Contact\n0: Quit')
     
     let userInput
     do {
-        userInput = prompt("What's your choice?")
+        userInput = prompt("Select an option:")
     } while(!userInput)
     
 
